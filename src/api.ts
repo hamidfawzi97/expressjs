@@ -21,5 +21,9 @@ api.get('/hello', (req, res) => {
   res.status(200).send({ message: req });
 });
 
+app.post('/', (req, res) => {
+  console.log({HELLO:req});
+  res.status(200).send({ status: 'ok' });
+});
 // Version the api
 app.use('/api/v1', api);
