@@ -11,7 +11,7 @@ app.use(express.text({ type: 'text/html' }));
 
 // Healthcheck endpoint
 app.get('/', (req, res) => {
-  console.log(req.data);
+  console.log(req.body.data);
   res.status(200).send({ status: 'ok' });
 });
 
@@ -22,7 +22,7 @@ api.get('/hello', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-  console.log(req.data);
+  console.log(req.body.data);
   res.status(200).send({ status: 'ok' });
 });
 // Version the api
