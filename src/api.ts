@@ -22,7 +22,7 @@ api.get('/hello', (req, res) => {
 });
 
 app.post('/', (req, res) => {
-  console.log({HELLO:req});
+  console.log({HELLO:req.data});
   res.status(200).send({ status: 'ok' });
 });
 // Version the api
